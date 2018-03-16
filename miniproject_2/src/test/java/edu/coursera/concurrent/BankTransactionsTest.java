@@ -55,7 +55,7 @@ public class BankTransactionsTest extends TestCase {
                     final Account destAccount = bankAccounts[destIndex];
 
                     final int transferAmount = randomIntValue(myRandom,
-                        srcAccount.balance());
+                            srcAccount.balance());
 
                     impl.issueTransfer(transferAmount, srcAccount, destAccount);
                 });
@@ -70,8 +70,8 @@ public class BankTransactionsTest extends TestCase {
 
         final long postSumOfBalances = sumBalances(bankAccounts);
         assertTrue("Expected total balance before and after simulation to be " +
-                "equal, but was " + preSumOfBalances + " before and " +
-                postSumOfBalances + " after",
+                        "equal, but was " + preSumOfBalances + " before and " +
+                        postSumOfBalances + " after",
                 preSumOfBalances == postSumOfBalances);
 
         return elapsed;
@@ -87,7 +87,7 @@ public class BankTransactionsTest extends TestCase {
         testDriver(new BankTransactionsUsingObjectIsolation());
         final long objectTime = testDriver(
                 new BankTransactionsUsingObjectIsolation());
-        final double improvement = (double)globalTime / (double)objectTime;
+        final double improvement = (double) globalTime / (double) objectTime;
 
         final int ncores = getNCores();
         double expected;
@@ -99,7 +99,7 @@ public class BankTransactionsTest extends TestCase {
             expected = 0.7 * ncores;
         }
         final String msg = String.format("Expected an improvement of at " +
-                "least %fx with object-based isolation, but saw %fx", expected,
+                        "least %fx with object-based isolation, but saw %fx", expected,
                 improvement);
         assertTrue(msg, improvement >= expected);
     }

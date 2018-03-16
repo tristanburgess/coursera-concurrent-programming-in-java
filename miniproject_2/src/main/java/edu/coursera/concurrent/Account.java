@@ -18,7 +18,7 @@ public final class Account {
     /**
      * Constructor.
      *
-     * @param setId The ID for this account
+     * @param setId              The ID for this account
      * @param setStartingBalance The initial balance for this account.
      */
     public Account(final int setId, final int setStartingBalance) {
@@ -54,7 +54,7 @@ public final class Account {
      *
      * @param amount The amount to add.
      * @return true if it was possible to add that amount (i.e. amount > 0),
-     *         false otherwise.
+     * false otherwise.
      */
     public boolean deposit(final int amount) {
         if (amount > 0) {
@@ -71,7 +71,7 @@ public final class Account {
      * not a shared-memory operation (i.e., it must contend with network
      * latencies, disk latencies, etc.).
      *
-     * @param srcID The source account ID
+     * @param srcID  The source account ID
      * @param destID The destination account ID
      */
     private static void busyWork(final int srcID, final int destID) {
