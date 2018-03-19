@@ -26,12 +26,12 @@ public final class SieveSequential extends Sieve {
      * provided in the primesList. If the provided candidate is found to be
      * prime, it is added to the primesList.
      *
-     * @param candidate Value we are checking to see if it is prime.
+     * @param candidate  Value we are checking to see if it is prime.
      * @param primesList List of already known primes that are less than
-     *        candidate.
+     *                   candidate.
      */
     private void checkPrime(final int candidate,
-            final List<Integer> primesList) {
+                            final List<Integer> primesList) {
         boolean isPrime = true;
         final int s = primesList.size();
         for (int i = 0; i < s; ++i) {
